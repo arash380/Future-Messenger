@@ -1,0 +1,21 @@
+.User {
+    display: flex;
+    align-items: center;
+    margin-top: 2%;
+    margin-left: 4%;
+}
+
+.User:hover {
+    background-color: #ededed;
+    width: 90%;
+    cursor: pointer;
+}
+
+.User p {
+    margin-left: 3%;
+}
+
+.AddIcon {
+    position: absolute;
+    right: 10%;
+}

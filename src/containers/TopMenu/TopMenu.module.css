@@ -1,0 +1,30 @@
+.TopMenu {
+    position: fixed;
+    display: flex;
+    left: 0;
+    top: 0;
+    width: 30%;
+    z-index: 100;
+}
+
+.Search {
+    display: flex;
+    background-color: #E0E0E0;
+    border-radius: 5px;
+    width: 60%;
+    margin: 15px auto 15px auto;
+}
+
+.Search input {
+    border: none;
+    outline: none;
+    background-color: #E0E0E0;
+    border-radius: 5px;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .TopMenu {
+        width: 100%;
+    }
+}

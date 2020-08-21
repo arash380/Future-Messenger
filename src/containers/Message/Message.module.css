@@ -1,0 +1,47 @@
+.Info {
+    margin-left: 3%;
+    display: flex;
+    align-items: center;
+
+}
+
+.Background {
+    margin-top: -2.5%;
+    max-width: 40%;
+    position: relative;
+}
+
+.Time {
+    margin-right: 0.3%;
+    margin-left: 0.3%;
+    font-weight: 400;
+    font-size: x-small;
+}
+
+.Name {
+    margin-right: 1%;
+    margin-left: 1%;
+}
+
+.Text {
+    word-wrap: break-word;
+}
+
+.ThisUser {
+    background-image: linear-gradient(to bottom, lightgreen, rgb(162, 245, 114));
+    border-radius: 10px;
+    padding: 0px 4px;
+    margin-left: 7.5%;
+}
+
+.OtherUser {
+    background-image: linear-gradient(to bottom, rgb(198, 212, 212), rgb(201, 207, 207));
+    border-radius: 10px;
+    margin-left: 7.5%;
+    padding: 0px 4px;
+}
+
+.ShortText {
+    display: inline-block;
+    margin-top: -1.2%;
+}

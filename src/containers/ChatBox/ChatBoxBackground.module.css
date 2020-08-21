@@ -1,0 +1,28 @@
+.ChatBoxBackground {
+    position: fixed;
+    width: 70%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: #CCFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 0.5px solid lightgrey;
+}
+
+.ChatBoxBackground p {
+    background-color: #D3D3D3;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+@media (max-width: 900px) {
+    .ChatBoxBackground {
+        width: 100%;     
+    }
+
+    .Hidden {
+        display: none;
+    }
+}

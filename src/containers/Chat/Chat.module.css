@@ -1,0 +1,47 @@
+.Chat {
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+}
+
+.BackIcon:hover {
+    cursor: pointer;
+}
+
+.Messages {
+    margin-bottom: 70px;
+}
+
+.MsgInput {
+    position: fixed;
+    display: flex;
+    background-color: white;
+    border-radius: 5px;
+    width: 70%;
+    height: 50px;
+    align-items: center;
+    bottom: 0;
+}
+
+.MsgInput input {
+    border: none;
+    outline: none;
+    background-color: white;
+    border-radius: 5px;
+    width: 100%;
+    font-size: large;
+}
+
+
+@media (max-width: 900px) {
+    .Chat {
+        width: 100%;
+        height: 92%;
+    }
+
+    .Hidden {
+        display: none;
+    }
+}

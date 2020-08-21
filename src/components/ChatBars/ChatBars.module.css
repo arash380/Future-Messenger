@@ -1,0 +1,23 @@
+.ChatBars {
+    position: fixed;
+    width: 30%;
+    margin-top: 60px;
+    height: 91%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.NoChat {
+    text-align: center;
+    margin-top: 5%;
+}
+
+@media (max-width: 900px) {
+    .ChatBars {
+        width: 100%;
+    }
+
+    .Hidden {
+        display: none;
+    }
+}
