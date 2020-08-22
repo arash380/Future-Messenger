@@ -1,6 +1,6 @@
 export const initialState = {
     user: null,
-    websiteLink: 'future-messenger7.firebaseapp.com'
+    websiteLink: 'future-messenger7.web.app'
 }
 
 export const actionTypes = {
