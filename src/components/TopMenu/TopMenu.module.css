@@ -26,5 +26,10 @@
 @media (max-width: 900px) {
     .TopMenu {
         width: 100%;
+        padding-bottom: 7px;
+    }
+
+    .Hidden {
+        display: none;
     }
 }

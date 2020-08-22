@@ -24,7 +24,9 @@ const Users = (props) => {
                 id={user.id}
                 name={user.name}
                 photo={user.photo}
-                closeModal={props.closeModal}/>
+                closeModal={props.closeModal}
+                messageSelected={props.messageSelected}
+                msgShowingHandler={props.msgShowingHandler}/>
         ))
     }
 

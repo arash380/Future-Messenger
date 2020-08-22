@@ -5,6 +5,7 @@ import {Avatar} from '@material-ui/core';
 import ChatIcon from '@material-ui/icons/Chat';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
+import HomeIcon from '@material-ui/icons/Home';
 import Aux from '../../hoc/Auxiliary/Auxiliary';
 import {useStateValue} from '../../containers/Store/StateProvider';
 
@@ -27,6 +28,10 @@ const SideDrawer = (props) => {
                     </div>
                 </div>
                 <div className={classes.SideDrawerDown}>
+                    <div className={classes.IconText} onClick={props.enterHome}>
+                        <HomeIcon />
+                        <p>Home</p>
+                    </div>
                     <div className={classes.IconText} onClick={props.openUsersModal}>
                         <ChatIcon />
                         <p>New Private Chat</p>

@@ -33,7 +33,7 @@ const ChatBar = (props) => {
             </div>;
 
     if (props.chatSearch) {
-        if (!props.name.startsWith(props.chatSearch)) {
+        if (!props.name.toLowerCase().includes(props.chatSearch.toLowerCase())) {
             chatBar = null
         }
     }

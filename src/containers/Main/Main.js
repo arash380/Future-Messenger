@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ChatBars from '../../components/ChatBars/ChatBars';
-import ChatBoxBackground from '../ChatBox/ChatBoxBackground';
-import TopMenu from '../TopMenu/TopMenu';
+import ChatBoxBackground from '../../components/ChatBox/ChatBoxBackground';
+import TopMenu from '../../components/TopMenu/TopMenu';
 import SideDrawer from '../../components/SideDrawer/SideDrawer';
 import Chat from '../Chat/Chat';
 import Modal from '../../components/UI/Modal/Modal';
@@ -41,6 +41,15 @@ class Main extends Component {
         this.setState({haveSelected: true});
     }
 
+    enterHome = () => {
+        this.props.history.push('/');
+        this.setState({
+            haveSelected: false,
+            msgShowing: false,
+            showSideDrawer: false
+        });
+    }
+
     logout = () => {
         this.props.history.push('/');
         auth.signOut();
@@ -64,7 +73,8 @@ class Main extends Component {
                 <TopMenu
                     drawerToggleClicked={this.sideDrawerToggleHandler}
                     inputHandler={this.searchChatHandler} 
-                    input={this.state.chatSearch} />
+                    input={this.state.chatSearch}
+                    msgShowing={this.state.msgShowing} />
                 <ChatBars
                     messageSelected={this.messageSelected}
                     chatSearch={this.state.chatSearch}
@@ -76,12 +86,15 @@ class Main extends Component {
                 <SideDrawer
                     open={this.state.showSideDrawer}
                     closed={this.sideDrawerClosedHandler}
+                    enterHome={this.enterHome}
                     openUsersModal={this.openUsersModal}
                     logout={this.logout} />
                 <Modal
                     show={this.state.showUsersModal}
                     modalClosed={this.closeUsersModal} >
-                    <Users closeModal={this.closeUsersModal} />
+                    <Users closeModal={this.closeUsersModal}
+                           messageSelected={this.messageSelected}
+                           msgShowingHandler={this.MsgShowingHandler} />
                 </Modal>
                 <Switch>
                     <Route path='/chat/:chatId'>

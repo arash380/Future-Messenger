@@ -5,18 +5,20 @@ import Main from './containers/Main/Main';
 import Auth from './containers/Auth/Auth';
 import {auth} from './firebase/firebase';
 import {actionTypes} from './containers/Store/reducer';
-import './App.css';
 
 const App = () => {
   const [{user}, dispatch] = useStateValue();
 
   useEffect(() => {
-    auth.onAuthStateChanged(user => {
+    const unsubscribe = auth.onAuthStateChanged(user => {
         dispatch({
             type: actionTypes.SET_USER,
             user: user
         })
     });
+    return () => {
+      unsubscribe();
+    }
   }, [dispatch])
 
   return (

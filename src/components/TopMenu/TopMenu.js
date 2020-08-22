@@ -6,13 +6,18 @@ import Aux from '../../hoc/Auxiliary/Auxiliary';
 
 const TopMenu = (props) => {
 
+  const styleClasses = [classes.TopMenu];
+  if (props.msgShowing) {
+    styleClasses.push(classes.Hidden);
+  }
+
   return (
     <Aux>
-        <div className={classes.TopMenu}>
+        <div className={styleClasses.join(' ')}>
             <MenuIcon onClick={props.drawerToggleClicked} fontSize="large" style={{cursor: 'pointer', color: '333333', margin: '15px 0 0 15px'}} />
             <div className={classes.Search}>
                 <SearchIcon fontSize="large" style={{cursor: 'pointer'}} />
-                <input placeholder="Search..." onChange={props.inputHandler} value={props.input} />
+                <input placeholder="Search for Chats..." onChange={props.inputHandler} value={props.input} />
             </div>
         </div>
     </Aux>
