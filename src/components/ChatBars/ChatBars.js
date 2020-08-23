@@ -55,8 +55,21 @@ const ChatBars = (props) => {
         ))
     }, [user.uid]);
 
+    const haveChat = () => {
+        if (chats) {
+            for (let i = 0; i < chats.length; i++) {
+                if (chats[i].correctChat === true) {
+                    return true;
+                }
+            }
+            return false;
+        } else {
+            return false;
+        }
+    }
+
     let chatBars = <h3 className={classes.NoChat}>Start a new chat from the sidebar</h3>;
-    if (chats?.length !== 0) {
+    if (haveChat()) {
         chatBars = chats?.map((chat) => {
                         if (chat.correctChat) {
                             return (

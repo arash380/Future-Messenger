@@ -170,8 +170,7 @@ const Chat = (props) => {
                         type='text'
                         onChange={event => createMsg(event.target.value)}
                         placeholder="Write a message..."
-                        value={msg}
-                        autoFocus={true} />
+                        value={msg} />
                     <Button
                         onClick={submitMsg}
                         className={classes.Send}
