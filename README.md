@@ -1,4 +1,10 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## You can find the live demo of this project here:
+[Future-Messenger](https://future-messenger7.web.app)
+
+### Future Messenger is a chatting app created with React and firebase.
+
+### Technologies used
+HTML, CSS, JavaScript, React, GitHub, Firebase, Emoji-mart, material UI
 
 ## Available Scripts
 
