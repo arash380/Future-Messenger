@@ -1,7 +1,7 @@
 ## You can find the live demo of this project here:
 [Future-Messenger](https://future-messenger7.web.app)
 
-### Future Messenger is a chatting app created with React and firebase.
+### Future Messenger is a single-page chatting app created with React and firebase.
 #### The user can chat with different people and also send emojis using this mobile-friendly app.
 
 ### Technologies used:
